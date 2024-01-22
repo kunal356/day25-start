@@ -57,3 +57,17 @@ import pandas
 
 # Converting Custom Data Frame to CSV data
 # custom_data_frame.to_csv("custom_csv")
+
+
+import pandas
+
+data = pandas.read_csv("2018_Central_Park_Squirrel_Census_-_Squirrel_Data_20240122.csv")
+total_black = len(data[data["Primary Fur Color"] == "Black"])
+total_cinnamon = len(data[data["Primary Fur Color"] == "Cinnamon"])
+total_gray = len(data[data["Primary Fur Color"] == "Gray"])
+sq_dict = {
+    "color":["gray","red","black"],
+    "count":[total_gray,total_cinnamon,total_black]
+}
+sq_df = pandas.DataFrame(sq_dict)
+sq_df.to_csv("squirrel_count.csv")
