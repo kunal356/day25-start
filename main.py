@@ -18,7 +18,7 @@
 #             temperatures.append(int(row[1]))
 #     print(temperatures)
 
-import pandas
+# import pandas
 
 # data = pandas.read_csv("weather_data.csv")
 # print(data)
@@ -33,8 +33,8 @@ import pandas
 # print(max_value)
 
 # Get Data in Column
-# data["temp"]
-# data.temp
+# print(data["temp"])
+# print(data.temp)
 
 # Get Data in Row
 # print(data[data.day == "Monday"])
@@ -51,7 +51,7 @@ import pandas
 #     "students": ["Jai", "Shree", "Ram"],
 #     "marks": [90, 98, 99]
 # }
-
+#
 # custom_data_frame = pandas.DataFrame(data_dict)
 # print(custom_data_frame)
 
@@ -66,8 +66,8 @@ total_black = len(data[data["Primary Fur Color"] == "Black"])
 total_cinnamon = len(data[data["Primary Fur Color"] == "Cinnamon"])
 total_gray = len(data[data["Primary Fur Color"] == "Gray"])
 sq_dict = {
-    "color":["gray","red","black"],
-    "count":[total_gray,total_cinnamon,total_black]
+    "Fur Color": ["gray", "red", "black"],
+    "Count": [total_gray, total_cinnamon, total_black]
 }
 sq_df = pandas.DataFrame(sq_dict)
 sq_df.to_csv("squirrel_count.csv")
